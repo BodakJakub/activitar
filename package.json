@@ -1,0 +1,23 @@
+{
+  "name": "activitar",
+  "version": "1.0.0",
+  "description": "Easy activities that help YOU fight boredom in your life!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc assets/js/script.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BodakJakub/activitar.git"
+  },
+  "author": "Jakub Bodak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BodakJakub/activitar/issues"
+  },
+  "homepage": "https://github.com/BodakJakub/activitar#readme",
+  "dependencies": {
+    "typescript": "^3.2.2"
+  }
+}
