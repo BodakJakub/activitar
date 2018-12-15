@@ -78,7 +78,9 @@ body {
     border-radius: 0px;
     color: #FFAF7B;
     font-size: 18px;
+    padding: 8px;
     text-transform: uppercase;
+    width: auto;
 }
 
 .nav .btn--nav:hover {
