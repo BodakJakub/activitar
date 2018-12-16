@@ -1,9 +1,6 @@
-interface IAccObject {
-    act: string;
-    link: string;
-}
+import {IActObject} from './interfaces/interfaces';
 
-const actArr: Array<IAccObject> = [
+const actArr: Array<IActObject> = [
     {act: 'Read a book', link: 'https://www.listchallenges.com/bbcs-top-100-books-you-need-to-read-before-you-die'},
     {act: 'Watch a movie', link: 'https://www.imdb.com/list/ls055592025/'},
     {act: 'Learn a language', link: 'https://www.duolingo.com/'}];
@@ -19,14 +16,14 @@ function changeText(textElement) {
     textElement.innerHTML = `<a href=${link} target="_blank">${innerText}</a>`
 }
 
-function getActivity(actArr: Array<IAccObject>) {
+function getActivity(actArr: Array<IActObject>) {
     const rand: number = getRndInteger(0,3);
     const text: string = getRndText(actArr, rand);
     const link: string = getLink(actArr, rand);
     return [text, link];
 }
 
-function getLink(actArr: Array<IAccObject>, num: number) {
+function getLink(actArr: Array<IActObject>, num: number) {
     return actArr[num].link;
 }
 
@@ -34,6 +31,8 @@ function getRndInteger(min: number, max: number) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-function getRndText(actArray: Array<IAccObject>, num: number) {
+function getRndText(actArray: Array<IActObject>, num: number) {
     return actArray[num].act;
 }
+
+console.log('lol')

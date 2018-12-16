@@ -11,6 +11,9 @@ const presets = [
       useBuiltIns: "usage",
     },
   ],
+  [
+    "@babel/preset-typescript"
+  ]
 ];
 
 module.exports = { presets };

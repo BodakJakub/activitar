@@ -1,12 +1,14 @@
 {
   "name": "activitar",
   "version": "1.0.0",
+  "private": true,
   "description": "Easy activities that help YOU fight boredom in your life!",
-  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc assets/js/script.ts",
-    "build": "npx babel src --out-dir lib"
+    "build": "webpack --config webpack.config.js",
+    "watch": "watch \"npm run build\" src/js/script.ts",
+    "watch:webpack": "nodemon -e"
   },
   "repository": {
     "type": "git",
@@ -19,13 +21,22 @@
   },
   "homepage": "https://github.com/BodakJakub/activitar#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "mysql": "^2.16.0",
-    "typescript": "^3.2.2"
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.0"
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "nodemon": "^1.18.9",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.2.2",
+    "watch": "^1.0.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }
