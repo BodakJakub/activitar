@@ -1,5 +1,3 @@
-'use strict';
-
 interface IAccObject {
     act: string;
     link: string;
